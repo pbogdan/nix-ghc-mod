@@ -19,7 +19,7 @@ self: super: {
           doJailbreak (ghc-mod-raw.override { inherit ghc-mod-core; }))))
           (drv: {
              executableHaskellDepends = drv.executableHaskellDepends or []
-              ++ [ pkgs.makeWrapper pkgs.removeReferencesTo ];
+              ++ [ self.makeWrapper self.removeReferencesTo ];
             postInstall = drv.postInstall or "" + ''
               remove-references-to -t ${hp.ghc} $out/bin/ghc-mod
               remove-references-to -t ${ghc-mod-core} $out/bin/ghc-mod
