@@ -7,7 +7,7 @@ mkDerivation {
   pname = "cabal-helper";
   version = "1.0.0.0";
   src = fetchgit {
-    url = "git@github.com:alanz/cabal-helper.git";
+    url = "https://github.com/alanz/cabal-helper.git";
     sha256 = "1sxanylvny5mggny1w296cci1vs5g45byl9z5b6rawxqjn9clwih";
     rev = "9142d8a9e6ed18faf17a360521fbbbd25f6a3b47";
     fetchSubmodules = true;
