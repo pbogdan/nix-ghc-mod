@@ -1,6 +1,6 @@
 { mkDerivation, base, binary, bytestring, Cabal, cabal-doctest
 , cabal-helper, containers, deepseq, directory, doctest, extra
-, fclabels, fetchgit, filepath, ghc, ghc-boot, ghc-mod-core
+, fclabels, fetchFromGitHub, filepath, ghc, ghc-boot, ghc-mod-core
 , ghc-paths, haskell-src-exts, hlint, hspec, monad-control
 , monad-journal, mtl, old-time, optparse-applicative, pipes
 , process, safe, semigroups, split, stdenv, syb, template-haskell
@@ -9,11 +9,11 @@
 mkDerivation {
   pname = "ghc-mod";
   version = "5.9.0.0";
-  src = fetchgit {
-    url = "https://github.com/alanz/ghc-mod.git";
-    sha256 = "0nl0884pg15hvbrngb6dhazmx2j3v68hgq8lh345rihj01q35mzc";
+  src = fetchFromGitHub {
+    owner = "alanz";
+    repo = "ghc-mod";
     rev = "3ccd528d4f08363ea363871fed4bb8a9a213cd2d";
-    fetchSubmodules = true;
+    sha256 = "0nl0884pg15hvbrngb6dhazmx2j3v68hgq8lh345rihj01q35mzc";
   };
   isLibrary = true;
   isExecutable = true;

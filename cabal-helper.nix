@@ -1,16 +1,16 @@
 { mkDerivation, base, bytestring, Cabal, cabal-install, cabal-plan
-, containers, directory, fetchgit, filepath, ghc, ghc-paths, mtl
+, containers, directory, fetchFromGitHub, filepath, ghc, ghc-paths, mtl
 , pretty-show, process, semigroupoids, stdenv, template-haskell
 , temporary, text, transformers, unix, unix-compat, utf8-string
 }:
 mkDerivation {
   pname = "cabal-helper";
   version = "1.0.0.0";
-  src = fetchgit {
-    url = "https://github.com/alanz/cabal-helper.git";
+  src = fetchFromGitHub {
+    owner = "alanz";
+    repo = "cabal-helper";
     sha256 = "1sxanylvny5mggny1w296cci1vs5g45byl9z5b6rawxqjn9clwih";
     rev = "9142d8a9e6ed18faf17a360521fbbbd25f6a3b47";
-    fetchSubmodules = true;
   };
   isLibrary = true;
   isExecutable = true;
