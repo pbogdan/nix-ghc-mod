@@ -26,7 +26,7 @@ self: super: {
               remove-references-to -t ${cabal-helper-lib} $out/bin/ghc-mod
               wrapProgram "$out/bin/ghc-mod" \
                 --set cabal_helper_libexecdir \
-                  $(dirname $(find ${cabal-helper-bin}/libexec -name cabal-helper-wrapper))
+                ${cabal-helper-bin}/bin
             '';
           });
 }

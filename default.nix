@@ -25,9 +25,9 @@ let hp = pkgs.haskellPackages;
           remove-references-to -t ${cabal-helper-lib} $out/bin/ghc-mod
           wrapProgram "$out/bin/ghc-mod" \
             --set cabal_helper_libexecdir \
-              $(dirname $(find ${cabal-helper-bin}/libexec -name cabal-helper-wrapper))
+              ${cabal-helper-bin}/bin
         '';
       });
 in {
-    inherit ghc-mod;
+    inherit cabal-helper-lib cabal-helper-bin ghc-mod;
 }
