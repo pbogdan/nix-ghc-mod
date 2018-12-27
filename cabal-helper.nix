@@ -9,8 +9,8 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "alanz";
     repo = "cabal-helper";
-    sha256 = "1sxanylvny5mggny1w296cci1vs5g45byl9z5b6rawxqjn9clwih";
-    rev = "9142d8a9e6ed18faf17a360521fbbbd25f6a3b47";
+    sha256 = "1lypls1zkyg7pq2xcg6mm25x7rgndy2553yakdkayg4m8msr7f8f";
+    rev = "8fecf6a7754424ed1653dce632382707e8f03499";
   };
   isLibrary = true;
   isExecutable = true;

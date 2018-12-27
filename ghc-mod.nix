@@ -12,8 +12,8 @@ mkDerivation {
   src = fetchFromGitHub {
     owner = "alanz";
     repo = "ghc-mod";
-    rev = "3ccd528d4f08363ea363871fed4bb8a9a213cd2d";
-    sha256 = "0nl0884pg15hvbrngb6dhazmx2j3v68hgq8lh345rihj01q35mzc";
+    rev = "e5b7daf1a2c949b2d2900ae11b13a267ed25eedb";
+    sha256 = "0kh0a629m2z10yhk7ama3cj5qif7zynj32isf64vcy60b9ka5hwk";
   };
   isLibrary = true;
   isExecutable = true;
